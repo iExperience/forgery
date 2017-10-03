@@ -49,15 +49,15 @@ describe Forgery do
   end
 
   it "should return nil when Rails.root and Rails.root are not defined" do
-    expect(Forgery.rails_root).to be_nil
+    expect(Forgery.rails_root).to be nil
   end
 
   it "should not be a rails environment when there is not a rails_root" do
-    expect(Forgery.rails?).to be_false
+    expect(Forgery.rails?).to be false
   end
 
   it "should be a rails environment when there is a rails_root" do
     allow(Forgery).to receive(:rails?).and_return(true)
-    expect(Forgery.rails?).to be_true
+    expect(Forgery.rails?).to be true
   end
 end
